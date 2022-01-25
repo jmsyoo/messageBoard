@@ -23,6 +23,9 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/api/user', require('./controllers/users'));
+app.use('/api/message', require('./controllers/messages'))
+
 app.get('/', (req, res) => {
     res.send('Beezwax Message board')
 })
